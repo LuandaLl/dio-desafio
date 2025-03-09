@@ -1,1 +1,9 @@
 
+Este projeto consiste em um chatbot de FAQ (Frequently Asked Questions) que utiliza um modelo pré-existente, mas com a diferenciação de que sua fonte de dados foi personalizada para responder perguntas baseadas em arquivos PDF. Em vez de depender de uma base de conhecimento fixa ou de dados externos, o chatbot foi configurado para processar PDFs carregados e gerar respostas contextuais a partir desses documentos.
+Como Funciona:
+
+    Fonte de Dados (PDFs): O modelo é atualizado com PDFs contendo informações específicas, como artigos científicos, manuais ou qualquer outro tipo de documento relevante.
+    Processamento de Texto: Usando ferramentas como o PyMuPDF (ou pdfplumber), o chatbot extrai o texto dos PDFs carregados.
+    Geração de Embeddings: O conteúdo extraído dos PDFs é convertido em embeddings (representações numéricas do texto) utilizando modelos como Sentence-Transformers.
+    Busca e Respostas: A partir dos embeddings gerados, um índice vetorial é criado com o auxílio de ferramentas como FAISS, permitindo ao chatbot fazer buscas rápidas e fornecer respostas com base no conteúdo dos PDFs.
+    Interatividade: O chatbot interage com o usuário em uma interface simples, como a criada com o Streamlit, onde ele pode responder perguntas contextuais diretamente relacionadas aos documentos carregados.
